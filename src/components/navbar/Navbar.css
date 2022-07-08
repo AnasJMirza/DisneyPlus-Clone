@@ -17,3 +17,57 @@
     width: 75px;
     cursor: pointer;
 }
+
+.navigation {
+    display: flex;
+    padding: 3px 6px;
+}
+
+li {
+    list-style: none;
+    font-size: 13px;
+    color: rgb(249, 249, 249);
+    
+}
+
+
+.navigation-link-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.icon-image {
+    width: 30px;
+    padding: 0px 3px;
+}
+
+/* .navigation-link-wrapper::before {
+    content: "";
+    background-color: rgb(249, 249, 249);
+    border-radius: 0px 0px 4px 4px;
+    bottom: -6px;
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    right: 0px;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.96);
+    visibility: hidden;
+    width: auto;
+}
+
+.navigation-link-wrapper:hover::before {
+    transform: scaleX(1);
+    visibility: visible;
+    opacity: 1 !important;
+} */
+
+
+@media only screen and (max-width: 768px){
+    .navigation {
+        display: none;
+    }
+}
