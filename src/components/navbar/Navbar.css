@@ -1,0 +1,19 @@
+.navbar-body {
+    background-color: #090b13;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.navbar-logo {
+    width: 75px;
+    cursor: pointer;
+}
