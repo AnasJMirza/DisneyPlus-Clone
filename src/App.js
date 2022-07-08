@@ -1,9 +1,10 @@
 import './App.css';
+import Login from './components/login/Login';
 
 function App() {
   return (
     <div>
-      <h3>Let's build disney+ clone together</h3>
+      <Login />
     </div>
   );
 }
