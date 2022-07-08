@@ -16,11 +16,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 45vh;
+  height: 60vh;
+  max-width: 80%;
   margin-bottom: 5vh;
   /* padding: 80px 40px; */
 }
-
 
 
 .login-button {
@@ -35,17 +35,32 @@
   font-weight: 600;
   margin-bottom: 10px;
   color: #f9f9f9;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.login-button:hover {
+    background-color: #0483ee;
 }
 
 @media only screen and (min-width: 768px) {
   .content {
-    height: 45vh;
+    height: 50vh;
   }
   .cta-logoOne,
   .cta-logoTwo {
     width: 50%;
   }
 }
+
+.description {
+    max-width: 50%;
+    text-align: center;
+}
+
+
+/* Media Queries */
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .content {
@@ -57,6 +72,10 @@
     width: 60%;
   }
 
+  .description {
+    max-width: 65%;
+  }
+
   .login-button {
     width: 70%;
     height: 6vh;
@@ -65,16 +84,19 @@
 
 @media only screen and (max-width: 479px) {
   .content {
-    height: 25vh;
+    height: 29vh;
+  }
+  .description {
+    max-width: 100%;
   }
 
   .cta-logoOne,
   .cta-logoTwo {
-    width: 70%;
+    width: 90%;
   }
 
   .login-button {
-    width: 80%;
+    width: 100%;
     height: 5vh;
   }
 }

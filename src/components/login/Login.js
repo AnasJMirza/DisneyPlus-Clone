@@ -8,9 +8,10 @@ const Login = (props) => {
   return (
     <div className="login-section">
       <div className="content">
-        <img src={ctaLogoOne} width="50%" className="cta-logoOne"/>
+        <img src={ctaLogoOne} width="100%" className="cta-logoOne"/>
         <div className="login-button">GET ALL THERE</div>
-        <img src={ctaLogoTwo} width="50%" className="cta-logoTwo" />
+        <div className="description">Get Premier Access to Raya and the Last Dragon for an additional fee with a Disney+ subscription. As of 03/26/21, the price of Disney+ and The Disney Bundle will increase by $1</div>
+        <img src={ctaLogoTwo} width="100%" className="cta-logoTwo" />
       </div>
     </div>
   );
