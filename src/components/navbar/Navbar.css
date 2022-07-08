@@ -27,6 +27,7 @@ li {
     list-style: none;
     font-size: 13px;
     color: rgb(249, 249, 249);
+    font-weight: 500;
     
 }
 
@@ -41,6 +42,26 @@ li {
 .icon-image {
     width: 30px;
     padding: 0px 3px;
+}
+
+
+.navbar-login-button {
+    border: 1px solid rgb(249, 249, 249);
+    border-radius: 4px;
+    padding: 4px;
+    height: 6vh;
+    width: 7vw;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-login-button:hover {
+    background-color: rgb(249, 249, 249);
+    color: #090b13;
 }
 
 /* .navigation-link-wrapper::before {
@@ -64,6 +85,7 @@ li {
     visibility: visible;
     opacity: 1 !important;
 } */
+
 
 
 @media only screen and (max-width: 768px){
