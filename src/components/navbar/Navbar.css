@@ -53,6 +53,7 @@ li {
     width: 7vw;
     transition: all 0.2s ease 0s;
     cursor: pointer;
+    font-size: 18px;
 
     display: flex;
     justify-content: center;

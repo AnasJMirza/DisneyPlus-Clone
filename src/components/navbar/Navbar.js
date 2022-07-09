@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import useNavbar from './useNavbar';
 
 import logo from '../../assets/images/logo.svg'
 import home from '../../assets/images/home-icon.svg'
@@ -10,6 +11,7 @@ import movies from '../../assets/images/movie-icon.svg'
 import series from '../../assets/images/series-icon.svg'
 
 const Navbar = () => {
+    const { handleAuth } = useNavbar();
     return (
         <div className='navbar-body'>
             <div className='navbar-logo'>
@@ -45,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className='navbar-login-button'>
+            <div className='navbar-login-button' onClick={handleAuth}>
                 Login
             </div>
         </div>
