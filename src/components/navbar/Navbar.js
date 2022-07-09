@@ -54,6 +54,7 @@ const Navbar = () => {
 
           <div >
             <img src={userPhoto} alt="Profile"  className="profile-pic" />
+            <span className="signout" onClick={handleAuth}>Sign Out</span>
           </div>
         </>
       }

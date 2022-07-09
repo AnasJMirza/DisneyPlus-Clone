@@ -68,6 +68,22 @@ li {
 .profile-pic {
     width: 50%;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.signout {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;    
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.profile-pic:hover ~ .signout {
+    opacity: 1;
+    transition-duration: 0.5s;
 }
 
 /* .navigation-link-wrapper::before {

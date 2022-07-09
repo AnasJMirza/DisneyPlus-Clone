@@ -1,7 +1,9 @@
-import { async } from "@firebase/util";
 import React from "react";
+import { useEffect } from "react";
 import { auth, provider } from "../../config/Firebase";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
 import {
   selectUserName,
@@ -9,29 +11,46 @@ import {
   selectUserphoto,
   setUserLoginDetails,
 } from "../../features/auth/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+
 
 const useNavbar = () => {
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userEmail = useSelector(selectUserEmail);
   const userPhoto = useSelector(selectUserphoto);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, async (user) => {
+        if(user) {
+            setUser(user)
+            navigate('/home')
+        }
+
+    })
+  }, [userName])
+  
 
   const handleAuth = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log(result.user.photoURL);
-      dispatch(
-        setUserLoginDetails({
-          name: result.user.displayName,
-          email: result.user.email,
-          photo: result.user.photoURL,
-        })
-      );
+      setUser(result.user)
     } catch (error) {
       console.log(error.message);
     }
   };
+
+  const setUser = (user) => {
+    dispatch(
+        setUserLoginDetails({
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+        })
+      );
+  }
 
   return {
     handleAuth,
