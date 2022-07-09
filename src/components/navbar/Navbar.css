@@ -81,6 +81,11 @@ li {
     opacity: 0;
 }
 
+.signout:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 .profile-pic:hover ~ .signout {
     opacity: 1;
     transition-duration: 0.5s;

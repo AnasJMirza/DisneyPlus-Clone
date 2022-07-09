@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { auth, provider } from "../../config/Firebase";
-import { signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import {
   selectUserEmail,
   selectUserphoto,
   setUserLoginDetails,
+  setLogoutState
 } from "../../features/auth/userSlice";
 
 
@@ -33,13 +34,24 @@ const useNavbar = () => {
   
 
   const handleAuth = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      console.log(result.user.photoURL);
-      setUser(result.user)
-    } catch (error) {
-      console.log(error.message);
+    if(!userName) {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            console.log(result.user.photoURL);
+            setUser(result.user)
+          } catch (error) {
+            console.log(error.message);
+          }
+    } else if (userName){
+        try {
+            await signOut(auth);
+            dispatch(setLogoutState())
+            navigate('/')
+        } catch (error) {
+            console.log(error.message);
+        }
     }
+    
   };
 
   const setUser = (user) => {
