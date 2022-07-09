@@ -3,8 +3,20 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <div className='a'>
-            HELLO GEE 😎
+        <div className='home-body'>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
         </div>
     );
 };

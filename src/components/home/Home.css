@@ -1,8 +1,6 @@
-.a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 40px;
-    font-weight: 600;
+.home-body {
+    background-image: url('../../assets/images/home-background.png');
+    padding: 10px;
+    min-height: 100vh;
+    font-size: 30px;
 }

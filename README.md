@@ -8,4 +8,4 @@
     <li>React</li>
     <li>Redux - Toolkit</li>
     <li>Firebase (Auth, FireStore, Hosting)</li>
-</ul>
+</ul> 
