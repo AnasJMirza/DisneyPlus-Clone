@@ -98,4 +98,9 @@ li {
     .navigation {
         display: none;
     }
+
+    .navbar-login-button {
+        width: 19vw;
+        height: 4vh;
+    }
 }
