@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit/dist/createSlice";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     name: "",
@@ -26,6 +26,8 @@ const userSlice = createSlice({
 
 
 export const { setUserLoginDetails, setLogoutState } = userSlice.actions;
-export const selectUserName = state.user.name;
-export const selectUserEmail = state.user.email;
-export const selectUserphoto = state.user.photo;
+export const selectUserName = (state) => state.user.name;
+export const selectUserEmail = (state) => state.user.email;
+export const selectUserphoto = (state) => state.user.photo;
+
+export default userSlice.reducer;
