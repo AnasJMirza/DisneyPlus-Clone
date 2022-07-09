@@ -65,6 +65,11 @@ li {
     color: #090b13;
 }
 
+.profile-pic {
+    width: 50%;
+    border-radius: 50%;
+}
+
 /* .navigation-link-wrapper::before {
     content: "";
     background-color: rgb(249, 249, 249);
