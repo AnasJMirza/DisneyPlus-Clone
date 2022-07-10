@@ -8,18 +8,11 @@ import slider1 from "../../assets/images/slider-badag.jpg";
 import slider2 from "../../assets/images/slider-badging.jpg";
 import slider3 from "../../assets/images/slider-scale.jpg";
 import slider4 from "../../assets/images/slider-scales.jpg";
+import usePicSlider from "./usePicSlider";
 
 const PicSlider = () => {
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    centerMode: true,
-    adaptiveHeight: true,
-  };
+
+    const { settings } = usePicSlider();
 
   return (
     <Slider {...settings} className="slider">
