@@ -1,38 +1,40 @@
-.slider{
-    margin-top: 20px;
-    
+.slider {
+  margin-top: 20px;
 }
 
-.slider-image-wrapper{
-    
-    padding: 10px;
-    cursor: pointer;
-    /* border: 2px solid green; */
-    border-radius: 4px;
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  font-size: 10px;
+}
 
+.slider-image-wrapper {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .slider-image {
-    width: 100%;
-    height: 100%;
-    box-shadow: 5px 5px 15px 5px #0f0f0f;    
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 15px 5px #0f0f0f;
 }
 
 .slider-image:hover {
-    padding: 0;
-    border: 3px solid rgb(249, 249, 249, 0.8);
-    transition: all 0.2s;
-
+  padding: 0;
+  /* border: 3px solid rgb(249, 249, 249, 0.8); */
+  outline: 4px solid rgb(249, 249, 249, 0.8);
+  transition: all 0.2s;
+  transition-duration: 300ms;
 }
 
 .slider > button {
-    opacity: 0;
-    height: 100%;
-    width: 5vw;
-    z-index: 1;
+  opacity: 0;
+  height: 100%;
+  width: 5vw;
+  z-index: 1;
 }
 
 .slider > button:hover {
-    opacity: 1;
-    transition: opacity 0.2s ease 0s;
+  opacity: 1;
+  transition: opacity 0.2s ease 0s;
 }
