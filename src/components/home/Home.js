@@ -3,6 +3,7 @@ import './Home.css'
 
 import PicSlider from '../picSlider/PicSlider';
 import Viewr from '../Viewr/Viewr';
+import MovieGrid from '../movieGrid/MovieGrid';
 
 import viewr1 from '../../assets/images/viewers-disney.png'
 import viewr2 from '../../assets/images/viewers-marvel.png'
@@ -18,8 +19,7 @@ import db from "../../config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { setMovies } from "../../features/movie/movieSlice";
-import { selectRecomended } from '../../features/movie/movieSlice';
-import Recomended from '../recomended/Recomended';
+import { selectRecomended, selectNewDisney, selectOrignals, selectTrending } from '../../features/movie/movieSlice';
 
 
 
@@ -77,14 +77,18 @@ const Home = () => {
       }, [userName]);
 
       
-        const recomendMovies = useSelector(selectRecomended)
+        const recomendedMovies = useSelector(selectRecomended)
+        const newDisneyMovies = useSelector(selectNewDisney)
+        const orignalsMovies = useSelector(selectOrignals)
+        const trendingMovies = useSelector(selectTrending)
         
 
     return (
         <div className='home-body'>
             <PicSlider />
             <Viewr />
-            <Recomended />
+            <MovieGrid heading="Recommended for you" data={recomendedMovies} />
+            
         </div>
     );
 };
