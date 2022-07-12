@@ -12,12 +12,11 @@ const movieSlice = createSlice({
     initialState,
     reducers: {
         setMovies: (state, action) => {
-            console.log(action.payload.recomend, "set");
             state.recomended = action.payload.recomend;
             state.newDisney = action.payload.new;
             state.orignals = action.payload.orignal;
             state.trending = action.payload.trend;
-        }
+        },
     }
 
 })

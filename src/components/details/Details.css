@@ -1,0 +1,135 @@
+.details-body {
+  position: relative;
+  min-height: calc(100vh-250px);
+  overflow-x: hidden;
+  display: block;
+  top: 72px;
+  padding: 0 calc(3.5vw + 5px);
+}
+
+.details-BG {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.details-BGImage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.details-titleImg-wrapper {
+  align-items: flex-end;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  margin: 0px auto;
+  height: 30vw;
+  min-height: 150px;
+  padding-bottom: 9vh;
+  width: 100%;
+  /* border: 1px solid white; */
+}
+
+.details-titleImg {
+  max-width: 600px;
+  min-width: 200px;
+  width: 35vw;
+}
+
+.details-buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 40%;
+  
+}
+
+.details-subTitle {
+  /* border: 1px solid white; */
+  color: rgb(249, 249, 249);
+  font-size: 15px;
+  min-height: 20px;
+}
+
+.details-description {
+  /* border: 1px solid white; */
+  line-height: 1.4;
+  font-size: 20px;
+  padding: 16px 0px;
+  color: rgb(249, 249, 249);
+}
+
+.content-body {
+  max-width: 874px;
+}
+
+@media only screen and (max-width: 768px) {
+  .details-BGImage {
+    width: initial;
+  }
+
+  .details-description {
+    font-size: 14px;
+  }
+
+  .details-subTitle {
+    font-size: 12px;
+  }
+}
+
+.player {
+  font-size: 15px;
+  margin-bottom: 22px;
+  padding: 0px 24px;
+  height: 56px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1.8px;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgb(249, 249, 249);
+  color: rgb(0, 0, 0);
+}
+
+.player > img {
+    width: 32px;
+}
+
+.player:hover {
+    background: rgb(198, 198, 198);
+}
+
+
+.trailer {
+    font-size: 15px;
+    margin-bottom: 22px;
+    margin-left: 22px;
+    padding: 0px 24px;
+    height: 56px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.8px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
+  }
+
+  .trailer > img {
+    width: 32px;
+}
+
+.trailer:hover {
+    background: rgb(198, 198, 198);
+}
