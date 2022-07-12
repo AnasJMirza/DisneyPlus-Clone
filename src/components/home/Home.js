@@ -59,6 +59,8 @@ const Home = () => {
                     break;
             }
 
+            console.log(orignals, "orignals in array");
+
 
             dispatch(setMovies({
                 recomend: recomended,
@@ -80,6 +82,7 @@ const Home = () => {
         const recomendedMovies = useSelector(selectRecomended)
         const newDisneyMovies = useSelector(selectNewDisney)
         const orignalsMovies = useSelector(selectOrignals)
+        console.log(orignalsMovies, "orignals");
         const trendingMovies = useSelector(selectTrending)
         
 
@@ -88,7 +91,9 @@ const Home = () => {
             <PicSlider />
             <Viewr />
             <MovieGrid heading="Recommended for you" data={recomendedMovies} />
-            
+            <MovieGrid heading="new Disney+" data={newDisneyMovies} />
+            <MovieGrid heading="Orignals" data={orignalsMovies} />
+            <MovieGrid heading="Trending" data={trendingMovies} />
         </div>
     );
 };
