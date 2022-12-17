@@ -1,8 +1,3 @@
-# Disney+ Clone 
-
-
-
-
 # Disney+ Clone 🔥
 Welcome to my Disney+ Clone project! In this project, I have built a clone of the popular streaming platform using React and Firebase for authentication and database management.
 
